@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="1099.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_Principal_FXML">
+   <children>
+      <StackPane fx:id="paneImageContainer" layoutX="264.0" layoutY="15.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="570.0" prefWidth="824.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0" />
+      <VBox alignment="CENTER" layoutX="32.0" layoutY="220.0" prefWidth="200.0" spacing="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="29.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Label text="Angle : " />
+                  <Text fx:id="textAngle" strokeType="OUTSIDE" strokeWidth="0.0" text="0°" wrappingWidth="27.9921875">
+                     <HBox.margin>
+                        <Insets left="22.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <Slider fx:id="sliderAngle" max="360.0" />
+            <HBox alignment="CENTER" prefHeight="36.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Label text="Transparence" />
+                  <TextField fx:id="textFieldTransparence" prefHeight="25.0" prefWidth="39.0" />
+               </children>
+            </HBox>
+            <Slider fx:id="sliderTransparance" />
+            <CheckBox fx:id="checkBoxBlur" mnemonicParsing="false" text="Effet : Box Blur" />
+            <GridPane fx:id="gridPaneContainer" alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Hauteur" />
+                  <Label text="Largeur" GridPane.rowIndex="1" />
+                  <Label text="Itérations" GridPane.rowIndex="2" />
+                  <Spinner fx:id="spinerHauteur" prefHeight="25.0" prefWidth="55.0" GridPane.columnIndex="1" />
+                  <Spinner fx:id="spinerLargeur" prefHeight="25.0" prefWidth="55.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Spinner fx:id="spinerIterations" prefHeight="25.0" prefWidth="55.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <HBox alignment="CENTER" prefHeight="39.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Button fx:id="buttonReset" disable="true" mnemonicParsing="false" onAction="#reset" text="Reset" />
+                  <Button fx:id="buttonQuitter" defaultButton="true" mnemonicParsing="false" onAction="#quitter" text="Quitter" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

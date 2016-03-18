@@ -1,0 +1,16 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.background-image
+{
+	-fx-background-image: url("nocamera.jpeg");
+	-fx-background-radius: 10pt;
+	-fx-background-size: stretch;	
+}
+
+.innerShadow
+{
+	/*-fx-background-color: #dddddd;*/
+    /*-fx-effect: innershadow( gaussian, rgba( 0, 0, 0, 0.5 ), 10, 0, 5, 5 );*/
+    -fx-effect: innershadow( gaussian , #EEEEEE , 20,0,0,0 );
+     /*-fx-border-radius: 10 10 10 10;*/
+    -fx-background-radius: 5;
+}
